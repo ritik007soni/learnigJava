@@ -1,5 +1,4 @@
 import java.util.*;
-import java.time.Duration;
 
 public class preAvg {
     public static void main(String args[]){
