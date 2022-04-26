@@ -45,6 +45,13 @@ class Stack{
         }
     }
 
+    boolean isEmpty(Object[] St){
+        if(top == 0){
+            return true;
+        }
+        return false;
+    }
+
     public static void main(String[] args){
 
         Stack obj = new Stack();
@@ -54,7 +61,7 @@ class Stack{
             while(true){
 
                 Scanner sc = new Scanner(System.in);
-                System.out.println("Press 1 to push\n Press 2 to pop\n Press 3 to peek\n Press 0 to exit: \n");
+                System.out.println("Press 1 to push\n Press 2 to pop\n Press 3 to peek\n Press 4 to check if the Stack is empty\n Press 0 to exit: \n");
                 int opt = sc.nextInt();
                 if(opt == 1){
                     System.out.println("Enter the elemnt to push");
@@ -67,6 +74,10 @@ class Stack{
                 }
                 else if(opt == 3){
                     obj.peek(St);
+                }
+                else if(opt == 4){
+                    boolean empty = obj.isEmpty(St);
+                    System.out.println(empty);
                 }
                 else{
                     break;
